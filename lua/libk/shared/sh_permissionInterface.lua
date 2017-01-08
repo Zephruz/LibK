@@ -16,9 +16,7 @@ function PermissionInterface.query( ply, access )
 	if exsto then
 		return ply:IsAllowed( access )
 	end
-	
-	-- Serverguard
-	-- Can't really return anything here because there aren't any defined permissions for SG
+
 	if serverguard then
 
 	end
@@ -66,8 +64,7 @@ function PermissionInterface.getRanks( )
 		end
 		return ranks
 	end
-	
-	-- Added this for SG Ranks
+
 	if serverguard then
 		for internalName, rankInfo in pairs( serverguard.ranks.stored ) do
 			table.insert( ranks, { internalName = internalName, title = rankInfo.name } )
