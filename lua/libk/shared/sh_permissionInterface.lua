@@ -17,10 +17,6 @@ function PermissionInterface.query( ply, access )
 		return ply:IsAllowed( access )
 	end
 
-	if serverguard then
-
-	end
-
 	KLogf(4, "[KReport] No compatible admin mod detected. ULX, Evolve and Exsto are supported- Defaulting." )
 
 	if ply:IsSuperAdmin() then
